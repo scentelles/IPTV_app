@@ -173,16 +173,53 @@ public class MainActivity extends AppCompatActivity {
         Log.v(TAG, "Keypress detected");
         myMqtt.pub("MEDIA/ATV/KeyPress", String.valueOf(keyCode));
 
-       // switch(keyCode)
+        switch(keyCode){
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                myMqtt.pub("MEDIA/AVR/Command", "VOL_UP");
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                myMqtt.pub("MEDIA/AVR/Command", "VOL_DOWN");
+            case KeyEvent.KEYCODE_DPAD_CENTER:
+                Log.v(TAG, "SELECT");
+                event.startTracking();
+                return true;
+            case KeyEvent.KEYCODE_DPAD_UP:
+
+            case KeyEvent.KEYCODE_DPAD_DOWN:
+            case KeyEvent.KEYCODE_DPAD_LEFT:
+            case KeyEvent.KEYCODE_DPAD_RIGHT:
+
+
+        }
 
         //Directoy return to avoid key event to be catched by system.
         //(Home button is not identified as a key press, so exiting from teh app is still OK
         return true;
     }
 
-    public void gerard (){
+    private boolean _handledMenuButton=false;
 
+    @Override
+    public boolean onKeyUp(final int keyCode,final KeyEvent event) {
+        switch(keyCode) {
+            case KeyEvent.KEYCODE_DPAD_CENTER:
+                Log.v(TAG, "UP!");
+                return true;
+        }
+        return super.onKeyUp(keyCode,event);
     }
+
+    @Override
+    public boolean onKeyLongPress(final int keyCode, final KeyEvent event) {
+        switch(keyCode) {
+            case KeyEvent.KEYCODE_DPAD_CENTER:
+                Log.v(TAG, "LONG!!!!!!!!!!!!!!!");
+                _handledMenuButton=true;
+                return true;
+        }
+        return super.onKeyLongPress(keyCode,event);
+    }
+
+
 
 
 
