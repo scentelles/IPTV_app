@@ -16,32 +16,32 @@ import java.net.Socket;
 
 
 public class STB_SFR {
-    private static final T_RETURN = 12;
-    private static final T_1 = 19;
-    private static final T_2 = 20;
-    private static final T_3 = 21;
-    private static final T_4 = 22;
-    private static final T_5 = 23;
-    private static final T_6 = 24;
-    private static final T_7 = 25;
-    private static final T_8 = 26;
-    private static final T_9 = 27;
-    private static final T_0 = 28;
-    private static final T_UP = 7;
-    private static final T_DOWN = 11;
-    private static final T_RIGHT = 10;
-    private static final T_LEFT = 8;
-    private static final T_REC = 17;
-    private static final T_FORWARD = 15;
-    private static final T_PLAY = 14;
-    private static final T_PAUSE = 14;
-    private static final T_REWIND = 13;
-    private static final T_OK = 9;
-    private static final T_SFR = 6;
-    private static final T_ON = 5;
-    private static final T_OFF = 5;
-    private static final T_VPLUS = 18;
-    private static final T_VMOINS = 16;
+    public static final T_RETURN = 12;
+    public static final T_1 = 19;
+    public static final T_2 = 20;
+    public static final T_3 = 21;
+    public static final T_4 = 22;
+    public static final T_5 = 23;
+    public static final T_6 = 24;
+    public static final T_7 = 25;
+    public static final T_8 = 26;
+    public static final T_9 = 27;
+    public static final T_0 = 28;
+    public static final T_UP = 7;
+    public static final T_DOWN = 11;
+    public static final T_RIGHT = 10;
+    public static final T_LEFT = 8;
+    public static final T_REC = 17;
+    public static final T_FORWARD = 15;
+    public static final T_PLAY = 14;
+    public static final T_PAUSE = 14;
+    public static final T_REWIND = 13;
+    public static final T_OK = 9;
+    public static final T_SFR = 6;
+    public static final T_ON = 5;
+    public static final T_OFF = 5;
+    public static final T_VPLUS = 18;
+    public static final T_VMOINS = 16;
 
 
     private Socket socketSend;
