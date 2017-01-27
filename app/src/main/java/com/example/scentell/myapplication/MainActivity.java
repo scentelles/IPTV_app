@@ -175,8 +175,8 @@ public class MainActivity extends AppCompatActivity {
 
        // switch(keyCode)
 
-
-       // return super.onKeyDown(keyCode, event);
+        //Directoy return to avoid key event to be catched by system.
+        //(Home button is not identified as a key press, so exiting from teh app is still OK
         return true;
     }
 
